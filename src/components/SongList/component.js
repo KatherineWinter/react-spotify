@@ -38,7 +38,7 @@ class SongList extends Component {
             </p>
           )}
 
-          {this.props.viewType == 'songs' && (
+          {this.props.viewType === 'songs' && (
             <p className='add-song'>
               <i className="fa fa-check" aria-hidden="true"/>
             </p>

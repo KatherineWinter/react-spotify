@@ -39,7 +39,10 @@ const MainHeader = ({
       {viewType === 'playlist' && (
         <div className='playlist-title-container'>
           <div className='playlist-image-container'>
-            <img className='playlist-image' src={currentPlaylist.images[0] ? currentPlaylist.images[0].url : null} />
+            <img
+              className='playlist-image'
+              alt={ currentPlaylist.name }
+              src={currentPlaylist.images[0] ? currentPlaylist.images[0].url : null} />
           </div>
           <div className='playlist-info-container'>
             <p className='playlist-text'>PLAYLIST</p>
@@ -58,7 +61,10 @@ const MainHeader = ({
       {viewType === 'Artist' && currentArtist && (
         <div>
           <div className='current-artist-header-container'>
-            <img className='current-artist-image' src={currentArtist.images[0].url} />
+            <img
+              className='current-artist-image'
+              alt={currentArtist.name}
+              src={currentArtist.images[0].url} />
             <div className='current-artist-info'>
               <p>Artist from your library</p>
               <h3>{currentArtist.name}</h3>

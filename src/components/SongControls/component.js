@@ -44,9 +44,7 @@ class SongControls extends Component {
   getSongIndex = () => {
     const { songs, songDetails } = this.props;
     const currentIndex = songs.map((song, index) => {
-      if (song.track === songDetails) {
-        return index;
-      }
+      return song.track === songDetails ? index : undefined
     }).filter(item => {
       return item !== undefined;
     })[0];

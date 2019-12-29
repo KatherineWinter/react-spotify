@@ -19,9 +19,11 @@
   text-align: center;
 }
 
-.artist-item a {
+.artist-item button {
   text-decoration: none;
   color: #fff;
+  width: auto;
+  height: auto;
 }
 
 .artist-item img {

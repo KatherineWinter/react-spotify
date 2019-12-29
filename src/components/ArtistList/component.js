@@ -14,16 +14,18 @@ const ArtistList = ({ artists, fetchArtistSongs, token, updateHeaderTitle }) => 
 
       return (
         <li onClick={() => {artistSongsAction(artist, token); } } className='artist-item' key={ i }>
-          <a>
+          <button>
             <div>
               <div className='artist-image'>
-                <img src={artist.images[0] ? artist.images[0].url : ''} />
+                <img
+                  alt={artist.name}
+                  src={artist.images[0] ? artist.images[0].url : ''} />
               </div>
               <div className='artist-details'>
                 <p>{ artist.name }</p>
               </div>
             </div>
-          </a>
+          </button>
         </li>
       );
     });

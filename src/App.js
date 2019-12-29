@@ -22,8 +22,10 @@ class App extends Component {
     let hashParams = {};
     let e, r = /([^&;=]+)=?([^&;]*)/g,
       q = window.location.hash.substring(1);
-    while (e = r.exec(q)) {
+    e = r.exec(q)
+    while (e) {
       hashParams[e[1]] = decodeURIComponent(e[2]);
+      e = r.exec(q)
     }
 
     if (!hashParams.access_token) {
@@ -33,7 +35,7 @@ class App extends Component {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  componentWillReceiveProps (nextProps) {
     if (nextProps.token) {
       this.props.fetchUser(nextProps.token);
     };
@@ -41,7 +43,6 @@ class App extends Component {
     if (this.audio !== undefined) {
       this.audio.volume = nextProps.volume / 100;
     }
-
   }
 
   stopSong = () => {

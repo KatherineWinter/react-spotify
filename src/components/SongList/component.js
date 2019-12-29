@@ -5,9 +5,9 @@ import './SongList.css';
 
 class SongList extends Component {
 
-  componentWillReceiveProps (nextProps) {
-    if(nextProps.token !== '' && !nextProps.fetchSongsError && nextProps.fetchSongsPending && nextProps.viewType === 'songs') {
-      this.props.fetchSongs(nextProps.token);
+  componentDidUpdate(prevProps, prevState) {
+    if(this.props.token !== '' && !this.props.fetchSongsError && this.props.fetchSongsPending && this.props.viewType === 'songs') {
+      this.props.fetchSongs(this.props.token);
     }
   }
 

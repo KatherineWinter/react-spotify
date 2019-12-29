@@ -4,9 +4,9 @@ import './UserPlaylists.css';
 
 class UserPlaylists extends Component {
 
-  componentWillReceiveProps (nextProps) {
-    if(nextProps.userId !== '' && nextProps.token !== '') {
-      this.props.fetchPlaylistsMenu(nextProps.userId, nextProps.token);
+  componentDidUpdate(prevProps, prevState) {
+    if(this.props.userId !== '' && this.props.token !== '') {
+      this.props.fetchPlaylistsMenu(this.props.userId, this.props.token);
     }
   }
 

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './ArtWork.css';
 
 const ArtWork = (albumArtwork) => {
-  return (
+  return albumArtwork.albumImage && (
     <div className='album-artwork-container'>
       <img
         className='album-artwork' src={ albumArtwork.albumImage }

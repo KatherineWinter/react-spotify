@@ -35,13 +35,13 @@ class App extends Component {
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    if (nextProps.token) {
-      this.props.fetchUser(nextProps.token);
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.token) {
+      this.props.fetchUser(this.props.token);
     };
 
     if (this.audio !== undefined) {
-      this.audio.volume = nextProps.volume / 100;
+      this.audio.volume = this.props.volume / 100;
     }
   }
 

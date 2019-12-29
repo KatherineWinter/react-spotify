@@ -36,13 +36,147 @@ h3 {
 }
 
 body {
-    font-family: 'Proxima Nova', Georgia, sans-serif;
+    font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
     background: rgb(24, 24, 24);
     color: #fff;
     max-width: 1400px;
     margin: 0 auto;
     padding: 0;
 }
+
+button {
+  background-color: transparent;
+  border: none;
+  color: #b3b3b3;
+  width: 32px;
+  min-width: 32px;
+  height: 32px;
+  outline: none;
+}
+
+[class*=" spoticon-"]:before,[class^=spoticon-]:before{
+  font-family:glue1-spoticon;
+  font-style:normal;
+  font-weight:400;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:inherit;
+  vertical-align:bottom;
+  display:inline-block;
+  text-decoration:inherit
+}
+
+.spoticon-pause-16:before{content:"\f130"; font-size:16px}
+.spoticon-pause-24:before{content:"\f1D3"; font-size:24px}
+.spoticon-pause-32:before{content:"\f131"; font-size:32px}
+.spoticon-play-16:before{content:"\f132"; font-size:16px}
+.spoticon-play-24:before{content:"\f1C8"; font-size:24px}
+.spoticon-play-32:before{content:"\f133"; font-size:32px}
+.spoticon-shuffle-16:before{content:"\f144"; font-size:16px}
+.spoticon-shuffle-24:before{content:"\f1D5"; font-size:24px}
+.spoticon-shuffle-32:before{content:"\f145"; font-size:32px}
+.spoticon-skip-back-16:before{content:"\f146"; font-size:16px}
+.spoticon-skip-back-24:before{content:"\f1D6"; font-size:24px}
+.spoticon-skip-back-32:before{content:"\f147"; font-size:32px}
+.spoticon-skip-forward-16:before{content:"\f148"; font-size:16px}
+.spoticon-skip-forward-24:before{content:"\f1D7"; font-size:24px}
+.spoticon-skip-forward-32:before{content:"\f149"; font-size:32px}
+.spoticon-skipback15-16:before{content:"\f280"; font-size:16px}
+.spoticon-skipback15-24:before{content:"\f3CC"; font-size:24px}
+.spoticon-skipback15-32:before{content:"\f281"; font-size:32px}
+.spoticon-skipforward15-16:before{content:"\f283"; font-size:16px}
+.spoticon-skipforward15-24:before{content:"\f3CD"; font-size:24px}
+.spoticon-skipforward15-32:before{content:"\f284"; font-size:32px}
+.spoticon-repeat-16:before{content:"\f13e"; font-size:16px}
+.spoticon-repeat-24:before{content:"\f1D4"; font-size:24px}
+.spoticon-repeat-32:before{content:"\f13f"; font-size:32px}
+.spoticon-repeatonce-16:before{content:"\f200"; font-size:16px}
+.spoticon-repeatonce-24:before{content:"\f201"; font-size:24px}
+.spoticon-repeatonce-32:before{content:"\f202"; font-size:32px}
+.spoticon-menu-16:before{content:"\f1FD"; font-size:16px}
+.spoticon-menu-32:before{content:"\f1FE"; font-size:32px}
+.spoticon-artist-placeholder-32:before{content:"\f103"; font-size:32px}
+.spoticon-track-16:before{content:"\f156"; font-size:16px}
+.spoticon-track-32:before{content:"\f157"; font-size:32px}
+.spoticon-video-16:before{content:"\f26B"; font-size:16px}
+.spoticon-video-24:before{content:"\f2A0"; font-size:24px}
+.spoticon-video-32:before{content:"\f26C"; font-size:32px}
+.spoticon-volume-16:before{content:"\f15e"; font-size:16px}
+.spoticon-volume-off-16:before{content:"\f1EF"; font-size:16px}
+.spoticon-volume-onewave-16:before{content:"\f203"; font-size:16px}
+.spoticon-volume-twowave-16:before{content:"\f206"; font-size:16px}
+.spoticon-volume-twowave-32:before{content:"\f206"; font-size:32px}
+.spoticon-spotifylogo-16:before{content:"\f298"; font-size:16px}
+.spoticon-spotifylogo-32:before{content:"\f299"; font-size:32px}
+.spoticon-spotify-connect-16:before{content:"\f1A3"; font-size:16px}
+.spoticon-spotify-connect-24:before{content:"\f1D8"; font-size:24px}
+.spoticon-spotify-connect-32:before{content:"\f1A4"; font-size:32px}
+.spoticon-connect-to-devices-16:before{content:"\f328"; font-size:16px}
+.spoticon-connect-to-devices-32:before{content:"\f327"; font-size:32px}
+.spoticon-device-arm-16:before{content:"\f305"; font-size:16px}
+.spoticon-device-arm-32:before{content:"\f306"; font-size:32px}
+.spoticon-device-car-16:before{content:"\f317"; font-size:16px}
+.spoticon-device-car-32:before{content:"\f318"; font-size:32px}
+.spoticon-device-computer-16:before{content:"\f29B"; font-size:16px}
+.spoticon-device-computer-32:before{content:"\f29C"; font-size:32px}
+.spoticon-device-mobile-16:before{content:"\f301"; font-size:16px}
+.spoticon-device-mobile-32:before{content:"\f302"; font-size:32px}
+.spoticon-device-multispeaker-16:before{content:"\f315"; font-size:16px}
+.spoticon-device-multispeaker-32:before{content:"\f316"; font-size:32px}
+.spoticon-device-other-16:before{content:"\f29F"; font-size:16px}
+.spoticon-device-other-32:before{content:"\f300"; font-size:32px}
+.spoticon-device-speaker-16:before{content:"\f29D"; font-size:16px}
+.spoticon-device-speaker-32:before{content:"\f29E"; font-size:32px}
+.spoticon-device-tablet-16:before{content:"\f303"; font-size:16px}
+.spoticon-device-tablet-32:before{content:"\f304"; font-size:32px}
+.spoticon-device-tv-16:before{content:"\f307"; font-size:16px}
+.spoticon-device-tv-32:before{content:"\f308"; font-size:32px}
+.spoticon-devices-16:before{content:"\f213"; font-size:16px}
+.spoticon-devices-32:before{content:"\f214"; font-size:32px}
+.spoticon-heart-16:before{content:"\f320"; font-size:16px}
+.spoticon-heart-24:before{content:"\f3DB"; font-size:24px}
+.spoticon-heart-32:before{content:"\f31F"; font-size:32px}
+.spoticon-heart-active-16:before{content:"\f322"; font-size:16px}
+.spoticon-heart-active-24:before{content:"\f3DC"; font-size:24px}
+.spoticon-heart-active-32:before{content:"\f321"; font-size:32px}
+.spoticon-block-16:before{content:"\f106"; font-size:16px}
+.spoticon-block-32:before{content:"\f107"; font-size:32px}
+.spoticon-ban-16:before{content:"\f31E"; font-size:16px}
+.spoticon-ban-32:before{content:"\f31D"; font-size:32px}
+.spoticon-thumbs-down-16:before{content:"\f14e"; font-size:16px}
+.spoticon-thumbs-down-32:before{content:"\f14f"; font-size:32px}
+.spoticon-thumbs-up-16:before{content:"\f150"; font-size:16px}
+.spoticon-thumbs-up-32:before{content:"\f151"; font-size:32px}
+.spoticon-ellipsis-16:before{content:"\f12c"; font-size:16px}
+.spoticon-ellipsis-24:before{content:"\f12c"; font-size:24px; position:relative; top:1px}
+.spoticon-add-16:before{content:"\f138"; font-size:16px}
+.spoticon-added-16:before{content:"\f10a"; font-size:16px}
+.spoticon-remove-16:before,.spoticon-x-16:before{content:"\f160"; font-size:16px}
+.spoticon-queue-16:before{content:"\f13a"; font-size:16px; -webkit-transform:translateX(-1px); transform:translateX(-1px)}
+.spoticon-chart-down-16:before{content:"\f25E"; font-size:16px}
+.spoticon-chart-down-32:before{content:"\f25F"; font-size:32px}
+.spoticon-chart-new-16:before{content:"\f25B"; font-size:16px}
+.spoticon-chart-new-32:before{content:"\f25C"; font-size:32px}
+.spoticon-chart-up-16:before{content:"\f262"; font-size:16px}
+.spoticon-chart-up-32:before{content:"\f263"; font-size:32px}
+.spoticon-radio-24:before{content:"\f1C7"; font-size:24px}
+.spoticon-search-24:before{content:"\f140"; font-size:24px}
+.spoticon-add-to-playlist-24:before{content:"\f3AC"; font-size:24px}
+.spoticon-browse-24:before{content:"\f393"; font-size:24px}
+.spoticon-now-playing-24:before{content:"\f346"; font-size:24px}
+.spoticon-artist-24:before{content:"\f392"; font-size:24px}
+.spoticon-androidshare-24:before{content:"\f48f"; font-size:24px}
+.spoticon-me-alt-24:before{content:"\f44A"; font-size:24px}
+.spoticon-playlist-24:before{content:"\f3A2"; font-size:24px}
+.spoticon-podcasts-16:before{content:"\f238"; font-size:16px}
+.spoticon-fullscreen-16:before{content:"\f28C"; font-size:16px}
+.spoticon-fullscreen-24:before{content:"\f3CE"; font-size:24px}
+.spoticon-fullscreen-32:before{content:"\f28D"; font-size:32px}
+.spoticon-minimise-16:before{content:"\f268"; font-size:16px}
+.spoticon-minimise-24:before{content:"\f3CB"; font-size:24px}
+.spoticon-minimise-32:before{content:"\f269"; font-size:32px}
+.spoticon-helpcircle-16:before{content:"\f23B"; font-size:16px}
+.spoticon-helpcircle-16:before{-webkit-transform:scaleX(-1); transform:scaleX(-1)}
 
 .app-container {
   display: flex;

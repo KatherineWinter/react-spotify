@@ -1,11 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import SongControls from '../SongControls';
-import VolumeControls from '../VolumeControls';
 import './Footer.css';
 
-const Footer = ({ stopSong, pauseSong, resumeSong, audioControl}) => {
-  return(
+const Footer = ({ stopSong, pauseSong, resumeSong, audioControl }) => {
+  return (
     <div className='footer'>
       <SongControls
         stopSong={ stopSong }
@@ -13,7 +12,6 @@ const Footer = ({ stopSong, pauseSong, resumeSong, audioControl}) => {
         resumeSong={ resumeSong }
         audioControl={ audioControl }
       />
-      <VolumeControls />
     </div>
   );
 };

@@ -1,13 +1,17 @@
 .volume-container {
-  position: absolute;
-  top: 48px;
-	right: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .volume {
   -webkit-appearance: none;
   width: 120px;
   height: 5px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 15px;
   background: #4CAF50;
   border-radius: 4px;
   outline: none;
@@ -23,10 +27,12 @@ input[type=range]::-moz-range-track {
   opacity: 1;
 }
 
-.volume-container  .fa-volume-up {
-	position: relative;
-	top: 3px;
-	margin-right: 5px;
+.control-button {
+  line-height: 20px;
+  letter-spacing: .015em;
+  font-weight: var(--glue-font-weight-normal);
+  color: #b3b3b3;
+  text-transform: none;
 }
 
 .volume:hover {

@@ -1,9 +1,7 @@
 .album-artwork-container {
-  width: 180px;
-  position: fixed;
-  bottom: 75px;
+  display: inline-block;
 }
 
 .album-artwork {
-  width: 100%;
+  width: 75px;
 }

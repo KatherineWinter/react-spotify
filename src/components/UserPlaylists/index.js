@@ -5,23 +5,20 @@ import { fetchPlaylistsMenu, fetchPlaylistSongs } from '../../actions/playlistAc
 import { updateHeaderTitle } from '../../actions/uiActions';
 
 const mapStateToProps = (state) => {
-
-	return {
-		userId: state.userReducer.user ? state.userReducer.user.id : '',
-		playlistMenu: state.playlistReducer.playlistMenu ? state.playlistReducer.playlistMenu : '',
-		token: state.tokenReducer.token ? state.tokenReducer.token : '',
-		title: state.uiReducer.title
-	};
-
+  return {
+    userId: state.userReducer.user ? state.userReducer.user.id : '',
+    playlistMenu: state.playlistReducer.playlistMenu ? state.playlistReducer.playlistMenu : '',
+    token: state.tokenReducer.token ? state.tokenReducer.token : '',
+    title: state.uiReducer.title
+  };
 };
 
 const mapDispatchToProps = (dispatch) => {
-
-	return bindActionCreators({
-		fetchPlaylistsMenu,
-		fetchPlaylistSongs,
-		updateHeaderTitle
-	}, dispatch);
-
+  return bindActionCreators({
+    fetchPlaylistsMenu,
+    fetchPlaylistSongs,
+    updateHeaderTitle
+  }, dispatch);
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(UserPlaylists);

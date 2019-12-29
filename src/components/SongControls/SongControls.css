@@ -19,14 +19,18 @@
   font-size: 12px;
 }
 
+.song-controls-wrapper {
+  margin: auto;
+  flex-grow: 2;
+}
+
 .song-controls {
   justify-content: center;
   display: flex;
-  margin-top: 20px;
 }
 
 .forward,
-.reverse,
+.reverse-song,
 .play-btn {
   padding: 0 5px;
   color: rgb(179, 179, 179);
@@ -44,12 +48,6 @@
   height: inherit;
 }
 
-.song-player-container .play-btn {
-  position: relative;
-  top: -7px;
-  font-size: 40px;
-}
-
 .song-player-container .pause-btn {
   position: relative;
   top: -7px;
@@ -57,22 +55,17 @@
   margin: 0 5px;
 }
 
-.play-btn .fa {
-  -webkit-text-stroke: 4px rgb(40, 40, 40);
-}
-
 .song-progress-container {
-  margin-top: -10px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .song-progress {
-  width: 500px;
+  width: -webkit-fill-available;
   height: 4px;
   background: rgb(64, 64, 64);
   border-radius: 4px;
-  margin: auto;
 }
 
 .song-expired {

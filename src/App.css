@@ -39,8 +39,7 @@ body {
     font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
     background: rgb(24, 24, 24);
     color: #fff;
-    max-width: 1400px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
 }
 
@@ -160,6 +159,7 @@ button {
 .spoticon-chart-up-16:before{content:"\f262"; font-size:16px}
 .spoticon-chart-up-32:before{content:"\f263"; font-size:32px}
 .spoticon-radio-24:before{content:"\f1C7"; font-size:24px}
+.spoticon-search-16:before{content:"\f140"; font-size:16px}
 .spoticon-search-24:before{content:"\f140"; font-size:24px}
 .spoticon-add-to-playlist-24:before{content:"\f3AC"; font-size:24px}
 .spoticon-browse-24:before{content:"\f393"; font-size:24px}
@@ -178,29 +178,56 @@ button {
 .spoticon-helpcircle-16:before{content:"\f23B"; font-size:16px}
 .spoticon-helpcircle-16:before{-webkit-transform:scaleX(-1); transform:scaleX(-1)}
 
+.App {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
 .app-container {
   display: flex;
-  position: relative;
 }
 
 .left-side-section {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  width: 180px;
+  padding-top: 10px;
+  padding-left: 10px;
   overflow-y: auto;
 }
 
+.bottom-menu-section > .bottom-menu {
+  display: none;
+}
+
 .main-section {
-  width: 900px;
-  position: relative;
-  left: 200px;
   padding: 0 10px;
+  flex-grow: 2;
 }
 
 .main-section-container {
-  position: relative;
-  top: 50px;
-  padding-bottom: 100px;
+  margin-top: 50px;
+  padding-bottom: 200px;
+}
+
+.bottom-menu-section {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+@media only screen and (max-width: 1000px) {
+  .main-section > .header,
+  .left-side-section,
+  .github-corner {
+    display: none;
+  }
+
+  .main-section-container {
+    margin-top: 10px;
+  }
+
+  .bottom-menu-section > .bottom-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }

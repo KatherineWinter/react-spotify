@@ -8,36 +8,44 @@
   font-weight: 300;
   text-transform: uppercase;
   font-size: 13px;
-  margin: 0;
+  margin-top: 20px;
   padding: 0 0 5px 0;
   letter-spacing: 1px;
 }
 
 .side-menu-item {
   list-style-type: none;
-  line-height: 28px;
   font-size: 14px;
-  width: 140px;
+  font-weight:700;
   cursor: pointer;
-text-overflow: ellipsis;
-white-space: nowrap;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family:spotify-circular, spotify-circular-cyrillic, spotify-circular-arabic, spotify-circular-hebrew, "Helvetica Neue", Helvetica, Arial, "Hiragino Kaku Gothic Pro", Meiryo, "MS Gothic", sans-serif;
+  letter-spacing:0.21px;
+  line-height:40px;
+  height:40px;
 }
 
 .side-menu-item:hover {
   color: #fff;
 }
 
-.radio {
-  margin-bottom: 20px;
-}
-
 .side-menu-container .active {
-	margin-left: -3px;
+  margin-left: -3px;
+  color: #fff;
 }
 
 .side-menu-container .active:before {
 	content: "";
-	border-left: 3px solid #1db954;
+	border-left: 4px solid #1db954;
 	position: relative;
-	left: -18px;
+  left: -18px;
+  height:40px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .side-menu-item {
+    font-size: 40px;
+    padding-bottom: 25px;
+  }
 }

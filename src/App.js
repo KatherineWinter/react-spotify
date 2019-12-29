@@ -101,13 +101,15 @@ class App extends Component {
                 resumeSong={this.resumeSong}
               />
               <MainView
+                webSocket={this.webSocket}
                 pauseSong={this.pauseSong}
                 resumeSong={this.resumeSong}
                 audioControl={this.audioControl}
               />
             </div>
           </div>
-
+        </div>
+        <div className='bottom-menu-section'>
           <Footer
             stopSong={this.stopSong}
             pauseSong={this.pauseSong}

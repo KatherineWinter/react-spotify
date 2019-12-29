@@ -81,13 +81,13 @@ class SongControls extends Component {
         <div className='song-controls-wrapper'>
           <div className='song-controls'>
             <div onClick={this.prevSong} className='reverse-song'>
-              <i className="fa fa-step-backward reverse" aria-hidden="true" />
+              <i className="spoticon-skip-back-16 reverse" aria-hidden="true" />
             </div>
-            <div className='play-btn'>
-              <i onClick={!this.props.songPaused ? this.props.pauseSong : this.props.resumeSong} className={"fa play-btn" + showPlay} aria-hidden="true" />
+            <div  onClick={this.props.songPaused ? this.props.resumeSong : this.props.pauseSong} className='play-btn'>
+              <i className={this.props.songPaused ? "spoticon-play-16" : "spoticon-pause-16"} aria-hidden="true" />
             </div>
             <div onClick={this.nextSong} className='next-song'>
-              <i className="fa fa-step-forward forward" aria-hidden="true" />
+              <i className="spoticon-skip-forward-16 forward" aria-hidden="true" />
             </div>
           </div>
 

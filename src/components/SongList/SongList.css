@@ -21,9 +21,10 @@
   list-style-type: none;
   border-bottom: 1px solid #666;
   display: flex;
-  line-height: 40px;
   font-size: 14px;
   cursor: pointer;
+  height: 40px;
+  align-items: center;
 }
 
 .user-song-item:hover {
@@ -33,14 +34,6 @@
 .active.user-song-item {
   color: #1db954;
   background: rgb(51, 51, 51);
-}
-
-.add-song {
-	color: #fff;
-}
-
-.user-song-item:hover > .play-song {
-  opacity: 1;
 }
 
 .song-title,
@@ -68,21 +61,15 @@
 
 .user-song-item .play-song {
   width: 40px;
-  opacity: 0;
   text-align: center;
+  color: #fff;
 }
 
 .user-song-item  .play-song .fa {
-  font-size: 30px;
   position: relative;
-  top: 5px;
   color: #ccc;
   cursor: pointer;
-  -webkit-text-stroke: 2px rgb(24, 24, 24);
-}
-
-.play-song .fa:hover {
-  color: #fff;
+  -webkit-text-stroke: 2px #fff;
 }
 
 .song-title p,
@@ -93,7 +80,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 0 8px;
-  line-height: 42px;
 }
 
 .song-length,
@@ -114,11 +100,6 @@
 .song-artist,
 .song-artist-header {
 	width: 180px;
-}
-
-.song-title,
-.song-title-header {
-	width: 250px;
 }
 
 .song-title-header p,
@@ -149,16 +130,56 @@
 }
 
 .add-song {
-  font-size: 20px;
   cursor: pointer;
-  z-index: 1;
-  width: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+  color: #fff;
+  flex-shrink: -1;
 }
 
-.add-song .fa {
-  -webkit-text-stroke: 3px rgb(24, 24, 24);
+.song-info-container {
+  display: flex;
+  flex-direction: row;
 }
 
-.add-song .fa:hover {
-  -webkit-text-stroke: 2px rgb(24, 24, 24);
+@media only screen and (max-width: 1000px) {
+  .user-song-item {
+    flex-wrap: wrap;
+  }
+
+  .song-info-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .song-header-container,
+  .song-album,
+  .song-added,
+  .song-length {
+    display: none;
+  }
+
+  .song-title,
+  .add-song {
+    font-weight: 600;
+  }
+
+  .song-artist {
+    font-size: 14px;
+    color: rgb(179, 179, 179);
+  }
+
+  .user-song-item {
+    padding: 15px 0px;
+  }
+
+  .bottom-menu-section > .bottom-menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .section-title {
+    padding: 0;
+    font-size: 25px;
+  }
 }
